@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Future</title>
+    <script>function createFloatingHeart() {
+    const heart = document.createElement('div');
+    heart.innerHTML = '❤️';
+    heart.style.position = 'fixed';
+    heart.style.bottom = '-20px';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = (Math.random() * 10 + 10) + 'px';
+    heart.style.opacity = Math.random();
+    heart.style.transition = 'transform 5s linear, opacity 5s linear';
+    heart.style.pointerEvents = 'none';
+    heart.style.zIndex = '0'; // Stays behind your content
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.style.transform = `translateY(-110vh) rotate(${Math.random() * 360}deg)`;
+        heart.style.opacity = '0';
+    }, 100);
+
+    setTimeout(() => heart.remove(), 6000);
+}
+
+// Create a new heart every 300ms
+setInterval(createFloatingHeart, 300);</script>
+    <link rel="stylesheet" href="un.css">
+    <style>
+        /* Progress Bar: She feels the end is near */
+        #progress {
+            position: fixed; top: 0; left: 0; width: 100%; height: 8px;
+            background: #fdf6f7; z-index: 1000;
+        }
+        #progress-bar {
+            height: 100%; width: 0%; background: #ff4d6d;
+            transition: width 1s ease;
+        }
+        
+        /* Box to contain the 'vision board' and the secret */
+        .vision-board {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 15px;
+            margin: 30px 0; padding: 20px;
+            background: #fffafb; border-radius: 20px;
+            text-align: left;
+        }
+        .vision-item {
+            background: white; padding: 15px; border-radius: 10px;
+            border: 1px solid #ff4d6d;
+        }
+        
+        /* The Secret Area: This is where we hide the proposal */
+        #secret-message {
+            display: none; /* Text starts invisible */
+            margin-top: 30px; border-top: 1px dashed #eee;
+            padding-top: 20px; background: #fdf6f7;
+            border-radius: 15px; padding: 25px;
+        }
+        
+        /* The Unlock Button */
+        #unlock-btn {
+            background: #ff4d6d; color: white; border: none;
+            padding: 15px 30px; border-radius: 30px; cursor: pointer;
+            font-size: 1.1rem; transition: transform 0.2s;
+        }
+        #unlock-btn:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body onload="fillProgress()">
+ <div class="nav-bar">
+    <a href="index.html">Home</a> | 
+    <a href="apology.html">Sorry</a> | 
+    <a href="memories.html">Memories</a>
+    
+</div>
+    <div id="progress"><div id="progress-bar"></div></div>
+
+    <div class="container">
+        <h1>Looking Forward...</h1>
+        <p>I know I made mistakes. But I am ready to use them to build something stronger than we have ever had before.</p>
+        
+        <div class="vision-board">
+            <div class="vision-item"><strong> Listening First:</strong> I will listen to hear you, not to respond.</div>
+            <div class="vision-item"><strong> I'll try for it:</strong> I will try my best to make you feel the same as before.</div>
+        </div>
+        
+        <p>Pujaaa the thing is ki mene bohot sochaa but jb meh tujhse dur ho gya tb mujheee realise huaa ki meh jin cheezo ko choti smjh rhaa tha wo bohot badi thi aur meh kuch smjh nhi paa rha uss time apne ego me aake, so mene tere liyeee yeh web banaya taaki tujheee sb btaa saku ki meh abb kya soch rhaa hu.</p>
+        
+        <button id="unlock-btn" onclick="revealSecret()">Reveal my biggest dream</button>
+        
+        <div id="secret-message">
+            <h2>A Vision for Us</h2>
+            <div style="line-height: 1.8; text-align: left;">
+                <p>I don’t just want us to go back. I want us to build a future that is completely secure. A future based on trust, respect, and a love that never fades.</p>
+                <p>I am ready to do the work. I am ready to earn my place back, one day at a time, for as long as it takes. <strong>And my biggest dream... is that one day, when we are ready, we can make this permanent. I have a vision of a day where I ask you a simple question, and I can put a promise on your finger to keep you safe and loved, forever.</strong></p>
+                <p>If you give me the chance to show you I've changed, that is the future I am building for us. Do you think we can start with just one coffee?</p>
+            </div>
+            <a href="mailto:her-email@example.com?subject=Re: Our Future" class="btn">Reply to me</a>
+        </div>
+        
+    </div>
+    <div id="game-zone" style="text-align: center; margin: 40px 0;">
+    <h3>One last favor...</h3>
+    <p>I know you've been crying over my mistakes. Could you help yourself find my smile again?</p>
+    
+    <div id="face-box" style="font-size: 80px; cursor: pointer; transition: 0.3s; padding: 20px;">
+        <span id="face-emoji">🥺</span>
+    </div>
+    <p id="instruction">Rub/Click to help yourself smile.</p>
+</div>
+
+<div id="secret-message" style="display:none; background: #fffafb; padding: 30px; border-radius: 20px; border: 1px dashed #ff4d6d;">
+    <h2>Thank you for this...</h2>
+    <p>You’ve seen the vision I have for us, and you know how much I want to make things right. But I don't want to rush you. I just want to be close to you again.</p>
+    <p><strong>My request is simple:</strong> Whenever you feel ready, could you spare just one hour of your day for me? No pressure, no demands—just one hour for us to talk, to breathe, and to start over.</p>
+    <a href="mailto:her-email@example.com?subject=I'd like to talk" class="btn">Click here to choose a time</a>
+</div>
+<div class="container">
+    <h3>Plant a seed for our future</h3>
+    <div id="garden" style="font-size: 30px; min-height: 50px;"></div>
+    <button onclick="plantFlower()">Plant a rose 🌹</button>
+</div>
+
+<script>
+    function plantFlower() {
+        document.getElementById('garden').innerHTML += '🌹';
+    }
+</script>
+<div style="text-align: center; margin-top: 30px;">
+    <button onclick="hug()" style="background: #ff4d6d; color: white; padding: 20px; border-radius: 50%; border: none; cursor: pointer; font-size: 2rem;">
+        🫂
+    </button>
+    <p id="hug-msg" style="display:none; margin-top: 10px;">Sending you the biggest hug. I wish I was there.</p>
+</div>
+<div class="container" style="text-align: center;">
+    <h3>The final promise...</h3>
+    <div id="lock" onclick="unlockPromise()" style="font-size: 60px; cursor: pointer;">🔒</div>
+    <div id="promise-text" style="display:none; padding: 20px; border: 2px dashed #ff4d6d; border-radius: 20px;">
+        <p>This is my vow to you: I will be your safe place, your listener, and your biggest fan. I have a vision of our future where I put a ring on your finger, not to own you, but to promise you that you never have to walk alone again.</p>
+    </div>
+</div>
+<div class="container">
+    <h2 class="section-title">Our Growth & Vows 💍</h2>
+    <div class="vow-list">
+        <div class="vow-item unlocked">
+            <div class="vow-status">✓</div>
+            <div class="vow-text">
+                <strong>The Foundation</strong>
+                <p>Everything we built from 2023. The laughs, and the bond that started it all.</p>
+            </div>
+        </div>
+
+        <div class="vow-item unlocked">
+            <div class="vow-status">✓</div>
+            <div class="vow-text">
+                <strong>The Healing</strong>
+                <p>Learning from the mistakes of the past and choosing to be better for each other today.</p>
+            </div>
+        </div>
+
+        <div class="vow-item locked">
+            <div class="vow-status">🔒</div>
+            <div class="vow-text">
+                <strong>The Forever</strong>
+                <p>Building a future where we never have to say goodbye again. This part is still being written...</p>
+            </div>
+        </div>
+    </div>
+    <script>document.querySelector('.vow-item.locked').addEventListener('click', function() {
+    alert("This part of our story is currently under construction. I need you to help me finish it. ❤️");
+});</script>
+    <div class="container">
+    <h2 class="section-title">A Bouquet for You 💐</h2>
+    <p style="font-size: 0.8rem; opacity: 0.7;">Click a flower to keep it...</p>
+    
+    <div class="flower-shop">
+        <div class="flower-item" onclick="pickFlower(this, '🌸')">🌸</div>
+        <div class="flower-item" onclick="pickFlower(this, '🌷')">🌷</div>
+        <div class="flower-item" onclick="pickFlower(this, '🌹')">🌹</div>
+        <div class="flower-item" onclick="pickFlower(this, '🌻')">🌻</div>
+        <div class="flower-item" onclick="pickFlower(this, '🌺')">🌺</div>
+    </div>
+
+    <div id="your-bouquet"></div>
+</div>
+</div>
+<script>function pickFlower(el, emoji) {
+    const bouquet = document.getElementById('your-bouquet');
+    
+    // Create the new flower for the bouquet
+    const newFlower = document.createElement('span');
+    newFlower.innerHTML = emoji;
+    newFlower.className = 'flower-falling';
+    newFlower.style.fontSize = '1.8rem';
+    
+    // Add it to the bouquet
+    bouquet.appendChild(newFlower);
+
+    // Add a little bounce to the shop item
+    el.style.transform = 'scale(0.8)';
+    setTimeout(() => {
+        el.style.transform = 'scale(1)';
+    }, 100);
+
+    // If she picks 5 flowers, show a hidden message!
+    if (bouquet.children.length === 5) {
+        const secretMsg = document.createElement('p');
+        secretMsg.innerHTML = "A full bouquet for the girl who deserves the world. ❤️";
+        secretMsg.style.color = "#ff4d6d";
+        secretMsg.style.fontSize = "0.9rem";
+        secretMsg.style.marginTop = "10px";
+        secretMsg.style.width = "100%";
+        bouquet.appendChild(secretMsg);
+    }
+}</script>
+</div>
+<script>
+document.querySelectorAll('.date-card').forEach(card => {
+    card.addEventListener('click', () => {
+        card.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            card.style.transform = 'translateX(10px)';
+            // You could even trigger a small heart explosion here!
+        }, 100);
+    });
+});</script>
+<div class="container">
+    <h3>Our Story Progress</h3>
+    <hr>
+    <div class="progress-wrapper" style="background: #eee; border-radius: 20px; height: 10px; width: 100%; position: relative; margin: 20px 0;">
+        <div id="progress-fill" style="background: #ff4d6d; width: 60%; height: 100%; border-radius: 20px; position: relative;">
+            <span style="position: absolute; right: 0; top: -25px; font-size: 0.7rem; color: #ff4d6d; font-weight: bold;">NOW: 2026</span>
+        </div>
+    </div>
+    <p style="font-size: 0.7rem; color: #bbb;">Loading forever... Please wait. ❤️</p>
+</div>
+<script>
+    function unlockPromise() {
+        document.getElementById('lock').innerHTML = '💍';
+        document.getElementById('promise-text').style.display = 'block';
+    }
+</script>
+
+<script>
+    function hug() {
+        document.getElementById('hug-msg').style.display = 'block';
+    }
+</script>
+<script>
+    let clicks = 0;
+    const face = document.getElementById('face-emoji');
+    const box = document.getElementById('face-box');
+    const secret = document.getElementById('secret-message');
+    const instr = document.getElementById('instruction');
+
+    box.onclick = () => {
+        clicks++;
+        // Make it grow or shake to feel like she's "wiping" it
+        box.style.transform = `scale(${1 + clicks/10})`;
+        
+        if (clicks >= 5) {
+            face.innerHTML = '😊'; // HE SMILES!
+            box.style.cursor = 'default';
+            instr.innerHTML = "You made yourself smile again. Thank you.";
+            
+            // Reveal the request
+            secret.style.display = 'block';
+            secret.style.animation = 'fadeIn 2s';
+        }
+    };
+</script>
+
+    <script>
+        // Progress Bar effect: She feels the end of the journey
+        function fillProgress() {
+            setTimeout(() => {
+                document.getElementById('progress-bar').style.width = '100%';
+            }, 500);
+        }
+
+        // --- GAME LOGIC ---
+        function revealSecret() {
+            // Unlock the secret message smoothly
+            const secret = document.getElementById('secret-message');
+            const btn = document.getElementById('unlock-btn');
+            
+            secret.style.display = 'block';
+            secret.style.animation = 'fadeIn 2s';
+            
+            // The button disappears, she cannot click it again
+            btn.style.display = 'none';
+        }
+    </script>
+    <script>function sendFlower() {
+    const flowers = ['🌹', '🌸', '💐', '🌻', '🌷'];
+    const flower = flowers[Math.floor(Math.random() * flowers.length)];
+    const garden = document.getElementById('digital-bouquet');
+    const span = document.createElement('span');
+    span.innerHTML = flower;
+    span.className = 'falling-flower';
+    garden.appendChild(span);
+}   </script>
+    <style>
+        /* Slow, deliberate fade-in for the secret message */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</body>
+</html>

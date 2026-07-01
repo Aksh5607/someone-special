@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>function createFloatingHeart() {
+    const heart = document.createElement('div');
+    heart.innerHTML = '❤️';
+    heart.style.position = 'fixed';
+    heart.style.bottom = '-20px';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = (Math.random() * 10 + 10) + 'px';
+    heart.style.opacity = Math.random();
+    heart.style.transition = 'transform 5s linear, opacity 5s linear';
+    heart.style.pointerEvents = 'none';
+    heart.style.zIndex = '0'; // Stays behind your content
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.style.transform = `translateY(-110vh) rotate(${Math.random() * 360}deg)`;
+        heart.style.opacity = '0';
+    }, 100);
+
+    setTimeout(() => heart.remove(), 6000);
+}
+
+// Create a new heart every 300ms
+setInterval(createFloatingHeart, 300);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Private Space | For You</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="loader">
+    <div class="heart-pulse">❤️</div>
+</div>
+
+    <div class="container">
+        <div class="header-section">
+            
+            <h1>hieee pujaaa❤️,<br> its mee</h1>
+            <p id="greeting" style="font-size: 0.8rem; font-weight: bold; color: #ff4d6d; text-transform: uppercase;"></p>
+            <p>puja i did spend my week over this so plz have a look<br>I am sorry pujaa❤️</p>
+        </div>
+
+        <hr>
+        <div class="container">
+         <p id="typewriter" style="font-family: 'Dancing Script', cursive; font-size: 1.4rem; color: #ff4d6d; min-height: 50px;"></p>
+        </div>  
+        <script>const text = "I know things haven't been perfect... but I'm still here, and I'm still yours.";
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("typewriter").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        // Start the effect after the page fades in
+        window.addEventListener('load', () => setTimeout(typeWriter, 1500));</script>
+        <div class="feature-box">
+            <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Adjust the Atmosphere</p>
+            <div class="mood-btns">
+                <button class="mood-btn" onclick="changeMood('#fdf6f7')" style="background: #fdf6f7; color: #5c4d51; border: 1px solid #ddd;">Warm</button>
+                <button class="mood-btn" onclick="changeMood('#fff0f3')" style="background: #fff0f3; color: #5c4d51; border: 1px solid #ddd;">Rose</button>
+                <button class="mood-btn" onclick="changeMood('#e3f2fd')" style="background: #e3f2fd; color: #5c4d51; border: 1px solid #ddd;">Calm</button>
+            </div>
+        </div>
+
+        <div class="feature-box">
+            <button onclick="showCompliment()">Click for a sweet thought</button>
+            <p id="compliment-text" style="margin-top: 15px; font-style: italic; color: #ff4d6d; min-height: 24px;"></p>
+        </div>
+
+
+        <hr>
+
+        <div class="nav-menu">
+            <p>So can we start, again❤️</p>
+            <a href="apology.html" class="btn main-btn">My apology to my madamji❤️❤️❤️</a>
+            <a href="memories.html" class="btn main-btn">The time together</a>
+            
+        </div>
+         <div class="feature-box">
+            <p style="font-size: 0.8rem; letter-spacing: 1px;">WE HAVE BEEN IN EACH OTHER'S LIVES FOR:</p>
+            <div id="together-counter" style="font-size: 1.5rem; font-weight: bold; color: #ff4d6d;"></div>
+            <p style="font-size: 0.7rem;">...and I'm counting on forever.</p>
+        </div>
+        <footer>
+            <p>Private & Confidential | Just for Her</p>
+        </footer>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

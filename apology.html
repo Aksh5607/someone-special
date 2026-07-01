@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I am Sorry</title>
+    <script>function createFloatingHeart() {
+    const heart = document.createElement('div');
+    heart.innerHTML = '❤️';
+    heart.style.position = 'fixed';
+    heart.style.bottom = '-20px';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = (Math.random() * 10 + 10) + 'px';
+    heart.style.opacity = Math.random();
+    heart.style.transition = 'transform 5s linear, opacity 5s linear';
+    heart.style.pointerEvents = 'none';
+    heart.style.zIndex = '0'; // Stays behind your content
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.style.transform = `translateY(-110vh) rotate(${Math.random() * 360}deg)`;
+        heart.style.opacity = '0';
+    }, 100);
+
+    setTimeout(() => heart.remove(), 6000);
+}
+
+// Create a new heart every 300ms
+setInterval(createFloatingHeart, 300);</script>
+    <link rel="stylesheet" href="un.css">
+    <style>
+        /* Special styles for the game area */
+        #game-area {
+            width: 250px;
+            height: 250px;
+            margin: 30px auto;
+            position: relative;
+            background: #fffafb;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 80px; /* Base face emoji size */
+            cursor: pointer;
+            box-shadow: inset 0 5px 15px rgba(255, 77, 109, 0.1);
+        }
+        .tear {
+            position: absolute;
+            font-size: 30px; /* Size of the water drops */
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        #apology-text {
+            display: none; /* Text starts hidden */
+            margin-top: 30px;
+            text-align: left;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        #game-instruction { margin-bottom: 20px; font-style: italic; color: #ff8fa3; }
+    </style>
+</head>
+<body>
+    <div id="loader">
+    <div class="heart-pulse"></div>
+</div>
+
+     <div class="nav-bar">
+    <a href="index.html">Home</a> | 
+    <a href="apology.html">Sorry</a> | 
+    <a href="memories.html">Memories</a>
+</div>  
+    
+    <div style="background: #fff0f3; padding: 25px; border-radius: 20px; margin-bottom: 30px; border: 1px dashed #ff4d6d;">
+    <h3 style="color: #ff4d6d; margin-top: 0;">heyy,<br> can you please forgive me for my mistakes and can we be together again!</h3>
+    <p>The things begin to start getting worse when I told everything to grish. After that i make many mistkes i discuss my own thoughts with my friend not thinking of your's.</p>
+    <p>I am here to apologise for the mistakes i have done. so plz pujaaa forgive me for my mistakes and can we start it again.</p>
+</div>
+<div class="container">
+    <h3>Clearing the clouds...</h3>
+    <p>Sometimes things get blurry, but I'm always here. <br>(Wipe the screen)<br> 
+        so we can be together again.
+    </p>
+    
+    <div id="fog-wrapper">
+        <div id="hidden-photo"></div>
+        <canvas id="fog-canvas"></canvas>
+    </div>
+</div>
+    <div class="container">
+        <h2>Please, Wipe your Tears...</h2>
+        <p id="game-instruction">you've been crying over my mistakes. I need you to clear them away so I can speak.<br>(Click on the tears)</p>
+        
+        <div id="game-area">
+            <span id="face">🥺</span> </div>
+
+        <div id="apology-text">
+    <h2 style="color: #ff4d6d; font-size: 2.2rem; margin-bottom: 20px;">I think you're ready to be better.</h2>
+    
+    <div style="text-align: left; line-height: 1.8; color: #5c4d51;">
+        <p>You didn’t deserve the pain I caused. I think i was able to clear all the things i have done, whenever i think of u i regret about being so rude to you, even when you were so good to me.</p>
+
+        <p>I know u have wasted so much time thinking of me but i can't resist that i was also doing the same. so i decided to make this apology website for you because i dont have anything to do.</p>
+
+        <p>i think my self realisation is the heaviest thing i am carring now a days.</p>
+
+        <p>And if you are thinking i did this all with AI and all so plz i create this whole thing only for you,<hr>4K5H_5606
+        <div style="margin-top: 50px;">
+    <h3>My Path Forward</h3>
+    <p>I think i was wrong at the time when i reacted at you,you were listening to me even when the mistakes were mine</p>
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+        <div style="background: white; padding: 15px; border-radius: 10px; border: 1px solid #ff4d6d;">
+            <strong> First:</strong> I am really so sorry because how i reacted you when i was angry was so wrong that I regret it later.
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 10px; border: 1px solid #ff4d6d;">
+            <strong>Second:</strong> I am really sorry for being so annoying to you.
+        </div>
+        <div style="background: white; padding: 15px; border-radius: 10px; border: 1px solid #ff4d6d;">
+            <strong>Third:</strong> pujaaa you really matter to me more than even my self-respect, so please puja forgive me for my mistakes.  </div>
+    </div>
+</div>
+        <p style="text-align: center; margin-top: 30px; font-size: 1.2rem; font-weight: bold;"><a href="future.html" class="btn">Can we try again?</a></p>
+    </div>
+</div>
+<div class="container">
+    <h3>A few truths I was afraid to say...</h3>
+    <ul id="confession-list" style="text-align: left; list-style: none;">
+        <li>✨ I am really scared of losing you again,</li>
+        <li>✨ I kept my pride high because I didn't know how to be vulnerable.</li>
+        <li>✨ I know the things were getting wierd because of me.</li>
+    </ul>
+</div>
+    </div>
+    
+    <div style="margin-top: 40px; text-align: center;">
+    <button onclick="showSurprise()" style="background: #ff4d6d; color: white; border: none; padding: 15px 30px; border-radius: 30px; cursor: pointer; font-size: 1rem;">
+        Click here for a reminder of why I’m here
+    </button>
+    <p id="surprise" style="display: none; margin-top: 20px; font-size: 1.2rem; font-style: italic; color: #ff4d6d;">
+        "Because the version of us that makes it through this will be stronger than anything else in the world. I still believe in 'us' more than I believe in anything else."
+    </p>
+</div>
+
+<div class="container">
+    <h3>My Deepest Truth...</h3>
+    <p style="font-size: 0.8rem; color: #ff4d6d;">(Scratch the card to reveal my heart)</p>
+    
+    <div class="scratch-container">
+        <div class="secret-para">
+            <p>
+                "In a world full of noise, you are my favorite sound. I’m sorry for the silence—I promise to be your safe place from now until forever. I love you, Pookie."</p>
+        </div>
+        <canvas id="scratch-canvas" width="300" height="200"></canvas>
+    </div>
+</div>
+<script>function initScratchCard() {
+    const canvas = document.getElementById('scratch-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    
+    // 1. Fill the canvas with a "Scratch Layer" color
+    ctx.fillStyle = '#ff4d6d'; // You can also use a gradient or image here
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    // Add some "shimmer" text to the scratch layer
+    ctx.fillStyle = "white";
+    ctx.font = "16px Arial";
+    ctx.textAlign = "center";
+    ctx.fillText("Scratch with love...", canvas.width/2, canvas.height/2);
+
+    let isDrawing = false;
+
+    function scratch(e) {
+        if (!isDrawing) return;
+        
+        // Get correct coordinates for mouse or touch
+        const rect = canvas.getBoundingClientRect();
+        const x = (e.clientX || e.touches[0].clientX) - rect.left;
+        const y = (e.clientY || e.touches[0].clientY) - rect.top;
+
+        ctx.globalCompositeOperation = 'destination-out'; // The magic "eraser" mode
+        ctx.beginPath();
+        ctx.arc(x, y, 20, 0, Math.PI * 2); // Size of the scratch "brush"
+        ctx.fill();
+    }
+
+    // Event Listeners for Mouse & Touch
+    canvas.addEventListener('mousedown', () => isDrawing = true);
+    canvas.addEventListener('touchstart', () => isDrawing = true);
+    window.addEventListener('mouseup', () => isDrawing = false);
+    window.addEventListener('touchend', () => isDrawing = false);
+    canvas.addEventListener('mousemove', scratch);
+    canvas.addEventListener('touchmove', scratch);
+}
+
+// Run it when the page loads
+window.addEventListener('DOMContentLoaded', initScratchCard);</script>
+<script>
+    function showSurprise() {
+        document.getElementById('surprise').style.display = 'block';
+    }
+</script>
+
+    <script>
+        // --- GAME LOGIC ---
+        const gameArea = document.getElementById('game-area');
+        const face = document.getElementById('face');
+        const apologyText = document.getElementById('apology-text');
+        const instruction = document.getElementById('game-instruction');
+        const tearCount = 10; // Number of tears she has to click
+        let remainingTears = tearCount;
+
+        // Generate tears randomly inside the face area
+        for (let i = 0; i < tearCount; i++) {
+            const tear = document.createElement('span');
+            tear.innerHTML = '💧';
+            tear.className = 'tear';
+            
+            // Random position (adjusting slightly so they stay near the eyes/face)
+            const randomTop = Math.random() * 60 + 20; // 20% to 80% from top
+            const randomLeft = Math.random() * 60 + 20; // 20% to 80% from left
+            
+            tear.style.top = `${randomTop}%`;
+            tear.style.left = `${randomLeft}%`;
+            
+            // When she clicks a tear
+            tear.addEventListener('click', function(e) {
+                // Prevent clicking on the 'face' beneath
+                e.stopPropagation(); 
+                
+                // Animate and remove the tear
+                this.style.opacity = '0';
+                this.style.transform = 'scale(2)';
+                
+                setTimeout(() => {
+                    this.remove();
+                    remainingTears--;
+                    
+                    // Check if all tears are cleared
+                    if (remainingTears === 0) {
+                        endGame();
+                    }
+                }, 300);
+            });
+            
+            gameArea.appendChild(tear);
+        }
+
+        function endGame() {
+            face.innerHTML = '😌'; // Face changes to relief
+            gameArea.style.cursor = 'default';
+            instruction.innerHTML = "Thank you. Now, please read my heart.";
+            
+            // Show the apology text smoothly
+            apologyText.style.display = 'block';
+            apologyText.style.animation = 'fadeIn 1.5s';
+        }
+    </script>
+    <style>
+        /* Subtle fade-in animation */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+
+
+<script>
+    const canvas = document.getElementById('scratch');
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = "#ff4d6d";
+    ctx.fillRect(0,0,300,100);
+    
+    canvas.onmousemove = (e) => {
+        ctx.clearRect(e.offsetX, e.offsetY, 20, 20);
+        if(e.offsetX > 250) document.getElementById('revealed').style.display = 'block';
+    }
+</script>
+<script>function initFogEffect() {
+    const canvas = document.getElementById('fog-canvas');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    const container = document.getElementById('fog-wrapper');
+    
+    // Set canvas size to match the container
+    canvas.width = container.offsetWidth;
+    canvas.height = container.offsetHeight;
+
+    // 1. Create the "Cloudy/Foggy" layer
+    ctx.fillStyle = "#cfd8dc"; // Soft grey-blue cloud color
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    // Add some "fog" texture
+    ctx.fillStyle = "white";
+    ctx.globalAlpha = 0.5;
+    for(let i=0; i<20; i++) {
+        ctx.beginPath();
+        ctx.arc(Math.random()*canvas.width, Math.random()*canvas.height, 50, 0, Math.PI*2);
+        ctx.fill();
+    }
+    ctx.globalAlpha = 1.0;
+
+    let isWiping = false;
+
+    function wipe(e) {
+        if (!isWiping) return;
+        
+        const rect = canvas.getBoundingClientRect();
+        const x = (e.clientX || e.touches[0].clientX) - rect.left;
+        const y = (e.clientY || e.touches[0].clientY) - rect.top;
+
+        // The "Erasing" effect
+        ctx.globalCompositeOperation = 'destination-out';
+        ctx.beginPath();
+        ctx.arc(x, y, 30, 0, Math.PI * 2); // Size of the wipe
+        ctx.fill();
+    }
+
+    // Mouse Events
+    canvas.addEventListener('mousedown', () => isWiping = true);
+    window.addEventListener('mouseup', () => isWiping = false);
+    canvas.addEventListener('mousemove', wipe);
+
+    // Touch Events (Mobile)
+    canvas.addEventListener('touchstart', (e) => { isWiping = true; wipe(e); });
+    canvas.addEventListener('touchend', () => isWiping = false);
+    canvas.addEventListener('touchmove', (e) => { e.preventDefault(); wipe(e); });
+}
+
+// Ensure it runs after the page is fully loaded
+window.addEventListener('load', initFogEffect);</script>
+<script>function setGreeting() {
+    const hour = new Date().getHours();
+    let greeting = "";
+    if (hour < 12) greeting = "Good Morning, My Sunshine ☀️";
+    else if (hour < 18) greeting = "Good Afternoon, Beautiful ✨";
+    else greeting = "Good Evening, My Love 🌙";
+    
+    document.getElementById('greeting').innerHTML = greeting;
+}
+window.addEventListener('load', setGreeting);
+
+// This makes the browser tab "blink" with a heart
+let heartToggle = true;
+setInterval(() => {
+    if (heartToggle) {
+        document.title = "❤️ Aksh loves you";
+    } else {
+        document.title = "💖 Always & Forever";
+    }
+    heartToggle = !heartToggle;
+}, 2000);</script>
+</body>
+</html>

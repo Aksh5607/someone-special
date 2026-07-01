@@ -1,0 +1,201 @@
+/* Master Styling */
+* { box-sizing: border-box; }
+
+body {
+    background-color: #fdf6f7;
+    color: #5c4d51;
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: background-color 0.8s ease; /* Smooth mood transition */
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 0 15px 50px rgba(255, 77, 109, 0.12);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #ff4d6d;
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+.feature-box {
+    margin: 25px 0;
+    padding: 20px;
+    background: #fffafb;
+    border-radius: 25px;
+    border: 1px solid #fff0f3;
+}
+
+/* Unified Button Style */
+.btn, button {
+    padding: 14px 28px;
+    background: #ff4d6d;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-size: 0.95rem;
+}
+
+.btn:hover, button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 77, 109, 0.3);
+    filter: brightness(1.1);
+}
+
+.mood-btns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.mood-btn {
+    padding: 8px 15px;
+    font-size: 0.75rem;
+}
+
+.main-btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #fce4ec;
+    margin: 30px 0;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.7rem;
+    color: #bbb;
+}
+
+/* 1. Custom Heart Cursor */
+html, body {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="fill:red;"><path d="M10 18.35l-1.45-1.32C3.4 12.36 1 10.28 1 7.5 1 5.5 2.5 4 4.5 4c1.54 0 3.04.99 3.5 2.36h1C9.46 4.99 10.96 4 12.5 4 14.5 4 16 5.5 16 7.5c0 2.78-2.4 4.86-7.55 9.54L10 18.35z"/></svg>'), auto;
+}
+
+/* 2. Page Fade-In Animation */
+body {
+    animation: fadeInPage 1.5s ease-in-out;
+}
+
+@keyframes fadeInPage {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 3. Floating Animation for Buttons */
+.btn {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translatey(0px); }
+    50% { transform: translatey(-5px); }
+    100% { transform: translatey(0px); }
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOutLoader 1s forwards 1.5s;
+}
+
+.heart-pulse {
+    font-size: 50px;
+    animation: pulse 1s infinite;
+}
+
+@keyframes fadeOutLoader {
+    to { opacity: 0; visibility: hidden; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+
+.adore-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.adore-card {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px 10px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s;
+}
+
+.adore-card:active { transform: scale(0.95); }
+
+/* The Message Pop-up */
+.hidden-msg {
+    display: none; /* Keeps it hidden by default */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-box {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    animation: popUp 0.3s ease-out;
+}
+
+@keyframes popUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    margin-top: 15px;
+}
